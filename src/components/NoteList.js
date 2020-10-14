@@ -3,21 +3,29 @@ import axios from 'axios';
 
 export default function NoteList() {
 
-  const [notes, setNotes] = useState(null);
+  const [notes, setNotes] = useState([]);
 
   useEffect(() => {
-    axios.get("/wp-json/wp/v2/posts")
-    .then(res => 
-      setNotes(res.data))
+    axios.get("/wp-json/wp/v2/notes")
+    .then(res => setNotes(res.data))
     .catch((err) => console.log(err.message));
   }, []);
   
-  console.log("notes?", notes)
+  console.log("notes?", notes.length)
 
-
+  // notes.forEach(element => {
+  //   console.log(element)
+  // });
   return (
-    <div>
+    <>
       NoteList
-    </div>
+      {notes.map((note) => (
+        <ul>
+        <li>{note.title.rendered}</li>
+        <li>{note.date}</li>
+        <li>{note.content.rendered}</li>
+        </ul>
+      ))}
+    </>
   )
 }

@@ -6,7 +6,10 @@ import NoteList from './components/NoteList';
 
 
 function App() {
-  Axios.get("/wp-json/wp/v2/posts").then(res => console.log(res))
+  
+  Axios.get("/wp-json/wp/v2/posts").then(res => console.log(res.data))
+
+
   return (
     <div className="App">
       YAS
