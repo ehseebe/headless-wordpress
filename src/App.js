@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import Axios from 'axios';
-import Note from './components/Note';
+import ViewNote from './components/ViewNote';
 import NoteList from './components/NoteList';
 
 
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       YAS
-      <Note />
+      <ViewNote />
       <NoteList />
     </div>
   );
