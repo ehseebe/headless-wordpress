@@ -13,9 +13,10 @@ export default function NoteList() {
   
   console.log("notes?", notes.length)
 
-  // notes.forEach(element => {
-  //   console.log(element)
-  // });
+  // display list of all posted notes
+  // show excerpts
+  // scroll
+  
   return (
     <>
       NoteList
