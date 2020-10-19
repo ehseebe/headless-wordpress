@@ -1,3 +1,3 @@
-# Little Note App
+# eightyaday portfolio & shop
 
-Headless Wordpress with React note app. Nothing wild, just working on writing nice code.
+Headless Wordpress with React portfolio and shop for eightyaday.
